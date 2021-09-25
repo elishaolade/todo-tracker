@@ -1,0 +1,13 @@
+.todo-item {
+    &__inner {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+    }
+}
+
+.todo-item--done {
+    & .todo-item__text {
+        text-decoration: line-through;
+    }
+}
