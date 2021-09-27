@@ -18,6 +18,19 @@ const useWatch = () => {
     }, [])
 
     //Methods
+
+    const getHours = () => {
+        return hours;
+    }
+
+    const getMinutes = () => {
+        return minutes;
+    }
+
+    const getSeconds = () => {
+        return seconds;
+    }
+
     const tick = () => {
         if(seconds < 59){
             setSeconds(seconds + 1);
@@ -34,7 +47,7 @@ const useWatch = () => {
 
     const toggleRun = () => {
         setIsRunning(!isRunning);
-        setState(isRunning ? 'pause':'start');
+        setState(isRunning ? 'start':'pause');
     }
 
     const reset = () => {
@@ -46,7 +59,7 @@ const useWatch = () => {
 
     // const state = !isRunning ? 'start':'pause';
 
-    return [seconds, minutes, hours, state, toggleRun];
+    return [seconds, minutes, hours, state, toggleRun, reset, getSeconds, getMinutes, getHours];
 }
 
 export default useWatch;

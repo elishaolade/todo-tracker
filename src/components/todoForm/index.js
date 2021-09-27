@@ -16,7 +16,7 @@ const TodoForm = (props) => {
     return (
         <form className="todo-form" onSubmit={handleSubmit}>
             <div className="todo-form__inner">
-                <input className="todo-form__input" type="text" value={value} onChange={handleChange}/>
+                Add item: <input className="todo-form__input" type="text" value={value} onChange={handleChange}/>
             </div>
         </form>
     )
